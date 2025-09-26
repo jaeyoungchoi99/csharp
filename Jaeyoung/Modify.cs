@@ -6,6 +6,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -25,7 +26,7 @@ namespace Jaeyoung
 
         private void Modify_Load(object sender, EventArgs e)
         {
-            
+
 
         }
 
@@ -47,6 +48,32 @@ namespace Jaeyoung
                 u_phone = phonetext.Text
             };
 
+            string namepattern = @"^[가-힣]{2,}$";
+            if (!Regex.IsMatch(nametext.Text, namepattern))
+            {
+                MessageBox.Show("이름 형식이 맞지 않습니다 ex)홍길동");
+            }
+
+            string pwpattern = @"^[a-zA-Z0-9]{8,}$";
+            if (!Regex.IsMatch(pwtext.Text, pwpattern))
+            {
+                MessageBox.Show("비밀번호는 영문+숫자 8자리이상입니다");
+                return;
+            }
+
+            if (pwtext.Text != chkpwtext.Text)
+            {
+                MessageBox.Show("비밀번호가 일치하지 않습니다");
+                return;
+            }
+
+            string phonepattern = @"^010[0-9]{4}[0-9]{4}$";
+            if (!Regex.IsMatch(phonetext.Text, phonepattern))
+            {
+                MessageBox.Show("전화번호 형식이 맞지 않습니다 ex)010xxxxxxxx");
+                return;
+            }
+
             var api = new Api();
             var response = await api.Modify(userdto);
 
@@ -54,17 +81,19 @@ namespace Jaeyoung
             {
                 var body = await response.Content.ReadAsStringAsync();
 
-                if(body == "True")
+                if (body == "True")
                 {
                     MessageBox.Show("수정 성공");
                     this.DialogResult = DialogResult.OK;
                     this.Close();
                 }
-                if(body == "False")
+                if (body == "False")
                 {
                     MessageBox.Show("수정 실패");
                 }
             }
         }
+
+        
     }
 }

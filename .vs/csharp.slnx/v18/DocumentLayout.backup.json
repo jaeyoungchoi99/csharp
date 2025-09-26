@@ -36,8 +36,10 @@
               "RelativeDocumentMoniker": "Jaeyoung\\Login.Designer.cs",
               "ToolTip": "C:\\Users\\Ever1_NT164_1\\Desktop\\csharp\\Jaeyoung\\Login.Designer.cs",
               "RelativeToolTip": "Jaeyoung\\Login.Designer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-24T23:45:59.581Z"
+              "WhenOpened": "2025-09-24T23:45:59.581Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -49,7 +51,8 @@
               "RelativeToolTip": "Jaeyoung\\Login.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-24T23:45:57.685Z"
+              "WhenOpened": "2025-09-24T23:45:57.685Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -61,7 +64,8 @@
               "RelativeToolTip": "Jaeyoung\\Jaeyoung.csproj",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-09-24T23:45:55.147Z"
+              "WhenOpened": "2025-09-24T23:45:55.147Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -73,7 +77,8 @@
               "RelativeToolTip": "Jaeyoung\\Jaeyoung.csproj.user",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003464|",
-              "WhenOpened": "2025-09-24T23:45:52.064Z"
+              "WhenOpened": "2025-09-24T23:45:52.064Z",
+              "EditorCaption": ""
             }
           ]
         }

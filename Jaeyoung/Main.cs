@@ -26,9 +26,17 @@ namespace jaeyoung
             var api = new Api();
 
             var list = await api.GetData();
+            
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataGridView1.AutoGenerateColumns = true;
             dataGridView1.DataSource = list;
+            dataGridView1.Columns["u_id"].HeaderText = "이메일";
+            dataGridView1.Columns["u_name"].HeaderText = "이름";
+            dataGridView1.Columns["u_pw"].HeaderText = "비밀번호";
+            dataGridView1.Columns["u_birth"].HeaderText = "생년월일";
+            dataGridView1.Columns["u_phone"].HeaderText = "전화번호";
+            dataGridView1.Columns["u_createdate"].HeaderText = "가입일자";
+
         }
 
         private void BT_add_Click(object sender, EventArgs e)
@@ -76,6 +84,11 @@ namespace jaeyoung
                 MessageBox.Show("삭제할 행을 선택하세요");
                 return;
             }
+            var result = MessageBox.Show("정말로 삭제하시겠습니까?","삭제 확인",MessageBoxButtons.OKCancel,MessageBoxIcon.Warning);
+            if(result == DialogResult.Cancel)
+            {
+                return;
+            }
 
             var row = dataGridView1.SelectedRows[0];
             var u_id = row.Cells["u_id"].Value.ToString();
@@ -90,7 +103,7 @@ namespace jaeyoung
                 if(body == "True")
                 {
                     MessageBox.Show("삭제 완료");
-                    dataGridView1.Rows.Remove(row);
+                    
                     BT_search.PerformClick();
                 }
                 if(body == "False")

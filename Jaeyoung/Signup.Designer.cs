@@ -42,13 +42,17 @@
             BT_confirm = new Button();
             BT_cancel = new Button();
             dateTimePicker1 = new DateTimePicker();
+            label7 = new Label();
+            label8 = new Label();
+            label9 = new Label();
+            label10 = new Label();
             SuspendLayout();
             // 
             // label1
             // 
             label1.AutoSize = true;
             label1.Font = new Font("맑은 고딕", 13.875F, FontStyle.Regular, GraphicsUnit.Point, 129);
-            label1.Location = new Point(27, 465);
+            label1.Location = new Point(27, 590);
             label1.Name = "label1";
             label1.Size = new Size(96, 50);
             label1.TabIndex = 0;
@@ -58,7 +62,7 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("맑은 고딕", 13.875F, FontStyle.Regular, GraphicsUnit.Point, 129);
-            label2.Location = new Point(27, 305);
+            label2.Location = new Point(27, 383);
             label2.Name = "label2";
             label2.Size = new Size(170, 50);
             label2.TabIndex = 1;
@@ -68,7 +72,7 @@
             // 
             label3.AutoSize = true;
             label3.Font = new Font("맑은 고딕", 13.875F, FontStyle.Regular, GraphicsUnit.Point, 129);
-            label3.Location = new Point(27, 153);
+            label3.Location = new Point(27, 201);
             label3.Name = "label3";
             label3.Size = new Size(170, 50);
             label3.TabIndex = 2;
@@ -78,7 +82,7 @@
             // 
             label4.AutoSize = true;
             label4.Font = new Font("맑은 고딕", 13.875F, FontStyle.Regular, GraphicsUnit.Point, 129);
-            label4.Location = new Point(27, 230);
+            label4.Location = new Point(27, 329);
             label4.Name = "label4";
             label4.Size = new Size(257, 50);
             label4.TabIndex = 3;
@@ -88,7 +92,7 @@
             // 
             label5.AutoSize = true;
             label5.Font = new Font("맑은 고딕", 13.875F, FontStyle.Regular, GraphicsUnit.Point, 129);
-            label5.Location = new Point(27, 381);
+            label5.Location = new Point(27, 465);
             label5.Name = "label5";
             label5.Size = new Size(170, 50);
             label5.TabIndex = 4;
@@ -107,7 +111,7 @@
             // nametext
             // 
             nametext.Font = new Font("맑은 고딕", 13.875F, FontStyle.Regular, GraphicsUnit.Point, 129);
-            nametext.Location = new Point(290, 465);
+            nametext.Location = new Point(290, 590);
             nametext.Name = "nametext";
             nametext.Size = new Size(419, 57);
             nametext.TabIndex = 6;
@@ -115,7 +119,7 @@
             // pwtext
             // 
             pwtext.Font = new Font("맑은 고딕", 13.875F, FontStyle.Regular, GraphicsUnit.Point, 129);
-            pwtext.Location = new Point(290, 153);
+            pwtext.Location = new Point(290, 201);
             pwtext.Name = "pwtext";
             pwtext.PasswordChar = '*';
             pwtext.Size = new Size(419, 57);
@@ -124,7 +128,7 @@
             // chkpwtext
             // 
             chkpwtext.Font = new Font("맑은 고딕", 13.875F, FontStyle.Regular, GraphicsUnit.Point, 129);
-            chkpwtext.Location = new Point(290, 230);
+            chkpwtext.Location = new Point(290, 329);
             chkpwtext.Name = "chkpwtext";
             chkpwtext.PasswordChar = '*';
             chkpwtext.Size = new Size(419, 57);
@@ -133,7 +137,7 @@
             // phonetext
             // 
             phonetext.Font = new Font("맑은 고딕", 13.875F, FontStyle.Regular, GraphicsUnit.Point, 129);
-            phonetext.Location = new Point(290, 381);
+            phonetext.Location = new Point(290, 465);
             phonetext.Name = "phonetext";
             phonetext.Size = new Size(419, 57);
             phonetext.TabIndex = 10;
@@ -169,16 +173,56 @@
             // dateTimePicker1
             // 
             dateTimePicker1.Format = DateTimePickerFormat.Custom;
-            dateTimePicker1.Location = new Point(290, 314);
+            dateTimePicker1.Location = new Point(290, 392);
             dateTimePicker1.Name = "dateTimePicker1";
             dateTimePicker1.Size = new Size(419, 39);
             dateTimePicker1.TabIndex = 14;
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Location = new Point(290, 151);
+            label7.Name = "label7";
+            label7.Size = new Size(251, 32);
+            label7.TabIndex = 15;
+            label7.Text = "4자리이상 이메일형식";
+            // 
+            // label8
+            // 
+            label8.AutoSize = true;
+            label8.Location = new Point(290, 278);
+            label8.Name = "label8";
+            label8.Size = new Size(227, 32);
+            label8.TabIndex = 16;
+            label8.Text = "영문숫자 8자리이상";
+            // 
+            // label9
+            // 
+            label9.AutoSize = true;
+            label9.Location = new Point(290, 541);
+            label9.Name = "label9";
+            label9.Size = new Size(254, 32);
+            label9.TabIndex = 17;
+            label9.Text = "-제외 ex)01012345678";
+            // 
+            // label10
+            // 
+            label10.AutoSize = true;
+            label10.Location = new Point(290, 668);
+            label10.Name = "label10";
+            label10.Size = new Size(203, 32);
+            label10.TabIndex = 18;
+            label10.Text = "2자리이상 한글로";
             // 
             // Signup
             // 
             AutoScaleDimensions = new SizeF(14F, 32F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(966, 592);
+            ClientSize = new Size(966, 718);
+            Controls.Add(label10);
+            Controls.Add(label9);
+            Controls.Add(label8);
+            Controls.Add(label7);
             Controls.Add(dateTimePicker1);
             Controls.Add(BT_cancel);
             Controls.Add(BT_confirm);
@@ -215,5 +259,9 @@
         private Button BT_confirm;
         private Button BT_cancel;
         private DateTimePicker dateTimePicker1;
+        private Label label7;
+        private Label label8;
+        private Label label9;
+        private Label label10;
     }
 }
